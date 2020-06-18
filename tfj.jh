@@ -1,0 +1,70 @@
+entity Action {
+	idaction Long required,
+	libelleaction String maxlength(254),
+	statutaction String maxlength(254),
+	codeaction String maxlength(254)
+}
+
+entity Actionparam {
+	idactionparam Long required,
+	libelleactionparam String maxlength(254),
+	codeactionparam String maxlength(254)
+}
+
+entity Etape {
+	idetape Long required,
+	libelleetape String maxlength(254),
+	statutetape String maxlength(254),
+	heureexecutionetape String maxlength(254),
+	codeetape String maxlength(254)
+}
+
+entity Etapeparam {
+	idetapeparam Long required,
+	libelleetapeparam String maxlength(254),
+	codeetapeparam String maxlength(254)
+}
+
+entity Messageerreur {
+	idmessage Long required,
+	description String maxlength(254)
+}
+
+entity Statutenum {
+	idstatut Long,
+	libellestatut String maxlength(254),
+	codestatut String maxlength(254)
+}
+
+entity Tfj {
+	idtfj Long required,
+	datetfj Instant,
+	statuttfj String maxlength(254)
+}
+
+
+
+// Relations
+relationship ManyToOne {
+	Action{idetape} to Etape
+}
+
+relationship ManyToOne {
+	Actionparam{idetapeparam} to Etapeparam
+}
+
+relationship ManyToOne {
+	Etape{idtfj} to Tfj
+}
+
+relationship ManyToOne {
+	Messageerreur{idaction} to Action
+}
+
+
+
+// Options
+service * with serviceImpl
+paginate * with pagination
+filter *
+
