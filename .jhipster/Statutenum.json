@@ -1,0 +1,38 @@
+{
+  "name": "Statutenum",
+  "fields": [
+    {
+      "fieldName": "idstatut",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "libellestatut",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": "254"
+    },
+    {
+      "fieldName": "codestatut",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": "254"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200618005901",
+  "entityTableName": "statutenum",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "tfj",
+  "applications": "*",
+  "microserviceName": "tfj"
+}

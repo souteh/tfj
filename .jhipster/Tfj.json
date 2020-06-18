@@ -1,0 +1,37 @@
+{
+  "name": "Tfj",
+  "fields": [
+    {
+      "fieldName": "idtfj",
+      "fieldType": "Long",
+      "fieldValidateRules": [
+        "required"
+      ]
+    },
+    {
+      "fieldName": "datetfj",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "statuttfj",
+      "fieldType": "String",
+      "fieldValidateRules": [
+        "maxlength"
+      ],
+      "fieldValidateRulesMaxlength": "254"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20200618010001",
+  "entityTableName": "tfj",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceImpl",
+  "jpaMetamodelFiltering": true,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "tfj",
+  "applications": "*",
+  "microserviceName": "tfj"
+}
